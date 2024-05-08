@@ -3,11 +3,26 @@ use rand::Rng;
 use std::io::{Write};
 use std::cmp::Ordering;
 
+struct Rectangle {
+    width: i32,
+    height: i32,
+    name: String
+}
 fn main(){
     // guess();
     // looping();
     // pos();
-    println!("Hello world");
+    let rect = Rectangle {
+        width: 50, 
+        height: 20,
+        name: String::from("rect1")
+    };
+    println!("Area of the rectangle is : {}", area(rect))
+}
+
+fn area(rect: Rectangle) -> i32 {
+    println!("Name of the rectangle is : {}", rect.name);
+    rect.width * rect.height
 }
 
 // fn pos() {
