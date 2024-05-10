@@ -1,3 +1,5 @@
+mod enum_test;
+
 use std::io;
 use rand::Rng;
 use std::io::{Write};
@@ -8,22 +10,34 @@ struct Rectangle {
     height: i32,
     name: String
 }
+
+impl Rectangle {
+    fn area(&self) -> i32 {
+        self.width * self.height
+    }
+    fn square(side: i32) -> Self {
+        Self {
+            width: side, 
+            height: side,
+            name: String::from("default")
+        }
+    }
+}
+
 fn main(){
     // guess();
     // looping();
     // pos();
-    let rect = Rectangle {
-        width: 50, 
-        height: 20,
-        name: String::from("rect1")
-    };
-    println!("Area of the rectangle is : {}", area(rect))
+    // let rect = Rectangle {
+    //     width: 50, 
+    //     height: 20,
+    //     name: String::from("rect1")
+    // };
+    // println!("Area of the rectangle is : {}", rect.area());
+    // let sq = Rectangle::square(30);
+    // println!("square area is: {}", sq.area());
 }
 
-fn area(rect: Rectangle) -> i32 {
-    println!("Name of the rectangle is : {}", rect.name);
-    rect.width * rect.height
-}
 
 // fn pos() {
 //     loop {
