@@ -13,6 +13,10 @@ impl<T, U> Rectangle<T, U> {
     }
 }
 
+impl<T: Display> ToString for T {
+    
+}
+
 fn main() {
     let rect1 = Rectangle {
         width: 40, 
