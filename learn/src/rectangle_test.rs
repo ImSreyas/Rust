@@ -19,4 +19,5 @@ fn main() {
     b = 25;
     println!("The point is a: {} and b: {}", point.x, point.y);
     println!("Value of b: {}", b);
+    
 }
