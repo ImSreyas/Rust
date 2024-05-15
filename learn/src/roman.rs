@@ -28,7 +28,7 @@ fn roman_to_int(s: String) -> i32 {
     sum
 }
 fn main() {
-    let test_string = String::from("MCMXCIV");
+    let test_string = String::from("MCMXCI");
     let out: i32 = roman_to_int(test_string);
     println!("The value is : {}", out);
 }
