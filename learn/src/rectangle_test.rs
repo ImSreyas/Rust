@@ -1,21 +1,18 @@
-#[derive(Debug)]
 struct Point {
-    x: i16,
-    y: i16
+    x: i32, 
+    y: i32
 }
 
 impl Point {
-    fn new(x: i16, y: i16) -> Self {
-        Self {
-            x, 
-            y
+    fn new() -> Point {
+        Point {
+            x: 10,
+            y: 20
         }
     }
 }
 
 fn main() {
-    let point: Point = Point::new(10, 20);
-    let mut b = point.x;
-    b = 25;
-    println!("The point is a: {} and b: {}", point.x, point.y);
+    let rect: Point = Point::new();
+    print!("x:{} and y: {}", rect.x, rect.y);
 }
