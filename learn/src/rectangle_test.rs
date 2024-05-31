@@ -5,16 +5,19 @@ struct Point {
 }
 
 impl Point {
-    fn new() -> Point {
-        Point {
-            x: 10,
-            y: 20
-        }
+    fn new(x: i32, y: i32) -> Point {
+        Point { x, y }
+    }
+    fn double(&mut self) -> &Point {
+        self.x = self.x * 2;
+        self.y = self.y * 2;
+        self 
     }
 }
 
 fn main() {
-    let rect: Point = Point::new();
-    print!("x:{} and y: {}", rect.x, rect.y);
-    print!("The point is : {:?}", rect)
+    let mut rect: Point = Point::new(10, 20);
+    println!("The point is : {:?}", rect);
+    rect.double();
+    println!("The point is : {:?}", rect);
 }
