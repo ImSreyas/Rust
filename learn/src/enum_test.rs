@@ -7,6 +7,7 @@ enum Ip {
     v6(String)
 }
 fn main() {
+    let a: String = "Hello".to_string();
     let val = Ip::v4 {x: 12, y: 20};
     println!("value is : {:?}", val);
 }
